@@ -2,74 +2,192 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<!-- universal font -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- font -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Gajraj+One&family=Poppins&display=swap" rel="stylesheet">
-
-	<!-- bootstrap CSS -->
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+	<!-- AOS -->
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<!-- bootstrap css -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="index.css">
-	<title>CBee</title>
+	<!-- ext css -->
+	<link rel="stylesheet" type="text/css" href="./index.css">
+	<title>C/B</title>
 </head>
-<body>
-	<!-- nav bar -->
-	<nav class="navbar navbar-expand-lg" id="navBar">
-	  <a class="navbar-brand" href="#" id="nav">CBee</a>
-	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-	    <span class="navbar-toggler-icon"></span>
-	  </button>
-	  <div class="collapse navbar-collapse" id="navbarNav">
-	    <ul class="navbar-nav ml-auto">
-	      <li class="nav-item active">
-	        <a class="nav-link mr-md-3" href="#" id="nav">About Me <span class="sr-only">(current)</span></a>
-	      </li>
-	      <li class="nav-item">
-	        <a class="nav-link mr-md-3" href="#" id="nav">Projects</a>
-	      </li>
-	      <li class="nav-item">
-	        <a class="nav-link" href="#" id="nav">Contact Me</a>
-	      </li>
-	    </ul>
-	  </div>
-	</nav>
-	<!-- main content -->
-	<div class="container-fluid" id="bg-color">
-		<!-- landing page -->
-		<div class="mt-5 text-dark min-vh-100" id="text-color">
-			<h6 class="mb-5 text-danger">&lt;html&gt;</h6>
-			<h6 class="d-inline-block text-danger">&lt;title&gt;</h6>
-			<h4 class="d-inline-block ml-3 text-muted">Howdy, I'm CBee.</h4>
-			<h6 class="d-inline-block ml-3 text-danger">&lt;&#47;title&gt;</h6>
-			<h6 class="mt-5 ml-3 pl-3 text-danger">&lt;body&gt;</h6>
-			<h6 class="d-inline-block ml-5 pl-5 text-danger">&lt;h1&gt;</h6>
-			<h1 class="d-inline-block ml-md-5 pl-md-5 mt-sm-5 mt-md-2">Front-end Web Developer</h1>
-			<h6 class="ml-5 d-inline-block text-danger">&lt;&#47;h1&gt;</h6>
-				<div class="pt-2 mb-2">
-					<h6 class="d-inline-block ml-3 text-danger">&lt;h3&gt;</h6>
-					<h3 class="ml-5 d-inline-block">Let's make your ideas a reality!</h3>
-					<h6 class="ml-5 d-inline-block text-danger">&lt;&#47;h3&gt;</h6>
-				</div>
-			<h6 class="mt-2 ml-3 pl-3 mb-5 text-danger">&lt;&#47;body&gt;</h6>
-			<h6 class="mt-5 text-danger">&lt;&#47;html&gt;</h6>
+<body id="body-color">
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Thank you for sending a message.</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       	Your message has been sent!
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+	<div id="bg-img">	
+		<!-- nav -->
+		<nav class="navbar navbar-expand-lg" id="navBar" data-aos="zoom-in-right">
+		  <a class="navbar-brand pt-1 pr-3 pl-3 pb-1" href="#logo" id="logo">C/B</a>
+		  <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" id="btn1">
+		    <span class="navbar-toggler-icon" id="nav-toggler"></span>
+		  </button>
+		  <div class="collapse navbar-collapse" id="navbarNav">
+		    <ul class="navbar-nav ml-auto">
+		      <li class="nav-item active">
+		        <a class="nav-link mr-md-3" href="#about-color" id="nav1">About Me <span class="sr-only">(current)</span></a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link mr-md-3" href="#proj" id="nav1">Projects</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="#contact-page" id="nav1">Contact Me</a>
+		      </li>
+		    </ul>
+		  </div>
+		</nav>
 
-		</div>
-		<!-- About Me -->
-		<h2 id="bg-bg-color">About Me</h2>
-		<div class="container-fluid mt-5 min-vh-100"  id="bg-bg-color">
-
-				<div class="d-flex text-left">
-					<p>I'm a Passionate Front-end Web Developer based in Quezon City. I like dark humor and memes. I was a Call Center agent handling fraud and non-fraud cases from a well-known U.S bank and now doing looking for a full-time job as a Web Developer. </p>
+		<!-- Landing page -->
+		<div class="container-fluid min-vh-100" id="landng-page" data-aos="fade-up"
+     data-aos-duration="3000">
+			<div class="d-sm-none d-md-flex justify-content-center align-items-center mt-md-5">
+				<div class="justify-content-center align-items-center mt-md-5 text-light">
+					<h4 class="mt-md-5 text-danger">&#8212;Hello there</h4>
+					<h1>I'm Christian Bryan Monta&ntilde;ez</h1>
+					<h1 class="text-center">Front-end Web Developer</h1>
+					<h5 class="text-center">Full-time | Part-time | Freelance</h5>
 				</div>
+			</div>
 		</div>
 	</div>
+	<div>
+		<!-- About Me -->
+		<div class="container-fluid min-vh-100 mt-5" id="about-color">
+			<h2 target="about-me" id="about-me"><b>.&#47;about-me:</b></h2>
+			<div class="text-center pl-5 pr-5" data-aos="fade-up"
+     data-aos-anchor-placement="top-bottom">
+				<p id="about-text">I'm a <b>Passionate Front-end Web Developer</b> based in Quezon City, Philippines. I like building things from scratch and turn ideas to reality, specializing in building responsive front-end web apps. I was a Call Center agent handling fraud and non-fraud cases from a well-known U.S bank and now looking for a <b>full-time</b> job as a Web Developer. </p>
+					<h1 class="mt-5">Tools:</h1>
+			</div>		
+			<!-- Tools container -->
+			<div class="text-center">
+				<div class="row text-center mb-5">
+				 
+				 	<div class="col-sm-12 col-md-4 mt-5">
+				 		<svg xmlns="http://www.w3.org/2000/svg" width="100px" height="100px" viewBox="0 0 512 512"><title>ionicons-v5_logos</title><path d="M64,32,98.94,435.21,255.77,480,413,435.15,448,32ZM372,164H188l4,51H368L354.49,366.39,256,394.48l-98.68-28L150.54,289H198.8l3.42,39.29L256,343.07l53.42-14.92L315,264H148L135.41,114.41l240.79,0Z"/></svg>
+				 		<h1>HTML</h1>
+				 	</div>
+
+				 	<div class="col-sm-12 col-md-4 mt-5">
+				 		<svg xmlns="http://www.w3.org/2000/svg" width="100px" height="100px" viewBox="0 0 512 512"><title>ionicons-v5_logos</title><path d="M64,32,99,435.22,255.77,480,413,435.15,448,32ZM354.68,366.9,256.07,395l-98.46-28.24L150.86,289h48.26l3.43,39.56,53.59,15.16.13.28h0l53.47-14.85L315.38,265H203l-4-50H319.65L324,164H140l-4-49H376.58Z"/></svg>
+				 		<h1>CSS</h1>
+				 	</div>
+
+		 			<div class="col-sm-12 col-md-4 mt-5 mb-5">
+				 		<svg xmlns="http://www.w3.org/2000/svg" width="100px" height="100px" fill="currentColor" class="bi bi-bootstrap" viewBox="0 0 16 16"> <path d="M5.062 12h3.475c1.804 0 2.888-.908 2.888-2.396 0-1.102-.761-1.916-1.904-2.034v-.1c.832-.14 1.482-.93 1.482-1.816 0-1.3-.955-2.11-2.542-2.11H5.062V12zm1.313-4.875V4.658h1.78c.973 0 1.542.457 1.542 1.237 0 .802-.604 1.23-1.764 1.23H6.375zm0 3.762V8.162h1.822c1.236 0 1.887.463 1.887 1.348 0 .896-.627 1.377-1.811 1.377H6.375z"/> <path d="M0 4a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V4zm4-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V4a3 3 0 0 0-3-3H4z"/> </svg>
+				 		<h1>Bootstrap</h1>
+				 	</div>
+
+				</div>				
+
+			</div>
+		</div>
+	</div>
+		<!-- Projects -->
+		<div class="container-fluid min-vh-100 mt-5" id="proj">
+			<h1 class="mt-5">.&#47;projects:</h1>
+			<div class="container-fluid mt-5" data-aos="fade-up"
+     data-aos-anchor-placement="top-bottom">
+				<div class="row mt-5">
+					<div class="order-2 order-md-1 col-md-6 text-center mt-5 pb-5" data-aos="fade-up"
+     data-aos-anchor-placement="top-bottom">
+						<h5>Sample Portfolio</h5>
+						<p>A Sample portfolio made with HTML and CSS framework(Bootstrap) , utilizing the components of Bootstrap.</p>
+						<p>Click below to view:</p>
+						<a href="https://gitlab.com/b256-monta-ez/s12/activity/-/commit/0f42a9867d2beccee3a01695b4f029272980d3a6" target="_blank"><img src="https://www.svgrepo.com/show/349377/gitlab.svg" height="50px" width="50px"></a>
+					</div>
+					<div class="order-1 order-md-2 col-md-6 mt-5 pb-5" data-aos="fade-up"
+     data-aos-anchor-placement="top-bottom">
+						<img src="./images/ada-portfolio-1.jpg" width="100%" height="300px" class="img-fluid">
+					</div>
+				</div>
+			</div>
+			<div class="container-fluid" data-aos="fade-up"
+     data-aos-anchor-placement="top-bottom">
+				<div class="row">
+					<div class="order-2 order-md-1 col-md-6 mt-5 pt-5 pb-5">
+						<img src="./images/ada-projects.jpg" width="100%" height="300px" class="img-fluid">
+					</div>
+					<div class="order-2 order-md-2 col-md-6 mt-5 pt-5 pb-5 text-center">
+						<h5>Project Section Sample</h5>
+						<p>A sample project section made with HTML and Bootstrap. With feature of responsiveness from small to large screen sizes.</p>
+						<p>Click below to view:</p>
+						<a href="https://gitlab.com/b256-monta-ez/s11/a1/-/commit/9f40cee760311af95d7e9885e262d548ab952ecb" target="_blank"><img src="https://www.svgrepo.com/show/349377/gitlab.svg" height="50px" width="50px"></a>
+					</div>
+				</div>
+			</div>
+			<div class="container-fluid" data-aos="fade-up"
+     data-aos-anchor-placement="top-bottom">
+				<div class="row">
+					<div class="order-2 order-md-1 col-md-6 mt-5 pt-5 pb-5 text-center">
+						<h5>Project Section Sample</h5>
+						<p>Made with HTML and Bootstrap, Utilizing the grid system to make a responsive row and columns from small to large screen sizes.</p>
+						<p>Click below to view:</p>
+						<a href="https://gitlab.com/b256-monta-ez/s10/a1/-/commit/f302a7bb0fd1b91d1622fa6e30d2374a7cf91f3b" target="_blank"><img src="https://www.svgrepo.com/show/349377/gitlab.svg" height="50px" width="50px"></a>
+					</div>
+					<div class="order-1 order-md-2 col-md-6 mt-5 pt-5 mb-5 pb-5">
+						<img src="./images/projects-bootstrap.jpg" class="img-fluid" width="100%" height="300px">
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<!-- Contact Me-->
+			<h1 class="mt-5 pt-5" id="contact-page">.&#47;contact-me:</h1>
+			<h6 class="pt-5 mt-5 text-center">Here to ask about something or just want to say hi? Please <b>send me a message</b>!</h6>
+		<div class="d-flex justify-content-center"> 
+			<form class="bg-light border flex-column border-dark p-3 mt-xl-5 col-sm-12 col-md-8">
+				<div class="form-group pt-5">
+			    <label for="exampleInputName1">Name</label>
+			    <input type="text" class="form-control" id="exampleInputName1" placeholder="Enter your name">
+			  </div>
+			  <div class="form-group pt-5">
+			    <label for="exampleFormControlInput1">Email address</label>
+			    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+			  </div>
+			  <div class="form-group pt-5">
+			    <label for="exampleFormControlTextarea1">Message:</label>
+			    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+			  </div>
+			  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Send Message</button>
+			</form>
+		</div>
+			<div class="text-center">
+				<a href="https://www.facebook.com/christianbryan.montanez.5/" target="_blank" title="Check my Facebook profile" id="links"> <svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" viewBox="0 0 256 256"><rect width="50px" height="50px" fill="none"/><path d="M232,128a104.3,104.3,0,0,1-91.5,103.3,4.1,4.1,0,0,1-4.5-4V152h24a8,8,0,0,0,8-8.5,8.2,8.2,0,0,0-8.3-7.5H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,8-8.5,8.2,8.2,0,0,0-8.3-7.5H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0-8,8.5,8.2,8.2,0,0,0,8.3,7.5H120v75.3a4,4,0,0,1-4.4,4C62.8,224.9,22,179,24.1,124.1A104,104,0,0,1,232,128Z"/></svg></a>
+				<a href="https://gitlab.com/christianbryanmontanez" target="_blank" title="Check my GitLab profile." id="links"> <svg xmlns="http://www.w3.org/2000/svg" height="50px" width="50px" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"/><path d="M238.3,152.5,211,50a12,12,0,0,0-22.9-1.1L167.5,104h-79L67.9,48.9A12,12,0,0,0,45,50L17.7,152.5a16.1,16.1,0,0,0,6.4,17.3l94.8,65.6a15.5,15.5,0,0,0,7.1,2.7h4a15.5,15.5,0,0,0,7.1-2.7l94.8-65.6A16.1,16.1,0,0,0,238.3,152.5ZM33.2,156.6,42.9,120H77.5l34,90.9Zm111.3,54.3,34-90.9h34.6l9.7,36.6Z"/></svg> </a>
+				<a href="mailto: christianbryanmontanez@gmail.com" id="links" title="Send an email."> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50px" height="50px" zoomAndPan="magnify" viewBox="0 0 30 30.000001" height="40" preserveAspectRatio="xMidYMid meet" version="1.0"><defs><clipPath id="id1"><path d="M 3.460938 6.5625 L 26.539062 6.5625 L 26.539062 24.707031 L 3.460938 24.707031 Z M 3.460938 6.5625 " clip-rule="nonzero"/></clipPath></defs><g clip-path="url(#id1)"><path fill="rgb(6.269836%, 5.879211%, 5.099487%)" d="M 24.230469 11.101562 L 15 16.769531 L 5.769531 11.101562 L 5.769531 8.832031 L 15 14.503906 L 24.230469 8.832031 Z M 24.230469 6.5625 L 5.769531 6.5625 C 4.492188 6.5625 3.472656 7.578125 3.472656 8.832031 L 3.460938 22.441406 C 3.460938 23.695312 4.492188 24.707031 5.769531 24.707031 L 24.230469 24.707031 C 25.507812 24.707031 26.539062 23.695312 26.539062 22.441406 L 26.539062 8.832031 C 26.539062 7.578125 25.507812 6.5625 24.230469 6.5625 " fill-opacity="1" fill-rule="nonzero"/></g></svg> </a>
+				<a href="https://www.linkedin.com/in/christian-bryan-monta%C3%B1ez-437309265/" target="_blank" title="Check my LinkedIn profile." id="links"><svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"/><path d="M212,28H44A16,16,0,0,0,28,44V212a16,16,0,0,0,16,16H212a16,16,0,0,0,16-16V44A16,16,0,0,0,212,28ZM96,176a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0ZM88,92a12,12,0,1,1,12-12A12,12,0,0,1,88,92Zm96,84a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.8-1.8A36,36,0,0,1,184,140Z"/></svg></a>
+			</div>
 
 
-
-
-
-	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+		<!-- AOS JS -->
+		<script>
+		  AOS.init();
+		</script>
+		<!-- bootstrap JS  -->
+		<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
 </body>
 </html>
